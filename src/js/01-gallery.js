@@ -1,4 +1,4 @@
-const SimpleLightbox = require('simple-lightbox');
+/* const SimpleLightbox = require('simple-lightbox'); */
 
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
@@ -7,18 +7,18 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-const gallery = document.querySelector('.gallery'); // Створюємо змінну - посилання на галерею в HTML
+export const gallery = document.querySelector('.gallery'); // Створюємо змінну - посилання на галерею в HTML
 
 
 gallery.addEventListener('click', onImageClick);
 
-const markedGallery = markupGallery(galleryItems); //Присвоюємо результат функції markupGallery на основі масиву даних galleryItems у змінну
+export const markedGallery = markupGallery(galleryItems); //Присвоюємо результат функції markupGallery на основі масиву даних galleryItems у змінну
 
 gallery.innerHTML = markedGallery; // Вставляємо рядок з розміткою (змінну markedGallery) в HTML
 
 // Створюємо функцію для розмітки галереї. 
 
-function markupGallery(items) {
+export function markupGallery(items) {
     return items.map(({ preview, original, description }) => { // Повертаємо результат функції
         return ` 
             <div class="gallery__item"> 
@@ -29,7 +29,7 @@ function markupGallery(items) {
     }).join(''); // обєднання масиву обєктів в рядок
 };
 
-function onImageClick(e) {
+export function onImageClick(e) {
     if (!e.target.classList.contains("gallery__image")) {
         return;
     }
