@@ -1,2 +1,3 @@
-import { gallery } from "./js/01-gallery";
-import * as 01-gallery from "./js/01-gallery";
+import { gallery, markupGallery, lightbox } from "./js/01-gallery";
+gallery.insertAdjacentHTML('afterbegin', markupGallery);
+/* import * as gallery from "./js/01-gallery"; */
