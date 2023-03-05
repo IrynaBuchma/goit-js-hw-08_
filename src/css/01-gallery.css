@@ -32,11 +32,12 @@
 }
 
 .gallery__link {
+  list-style: none;
   display: block;
   text-decoration: none;
   height: 100%;
 }
 
 .gallery__link:hover {
-  cursor: zoom-in;
+  cursor: pointer;
 }

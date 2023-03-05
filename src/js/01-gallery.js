@@ -9,11 +9,11 @@ export const gallery = document.querySelector('.gallery');
 
 export const markupGallery = galleryItems.reduce(
     (acc, { preview, original, description }) =>
-        acc +=`<li> 
-                <a class="gallery__item" href="${original}">
+        acc +=`<div class="gallery__item"> 
+                <a class="gallery__link" href="${original}">
                     <img class="gallery__image" src="${preview}" alt="${description}"/>
                 </a>
-            </li>`
+            </div>`
     , ''
 );
     
