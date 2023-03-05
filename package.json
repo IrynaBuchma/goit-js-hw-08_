@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@vimeo/player": "^2.18.0",
+    "caniuse-lite": "^1.0.30001460",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
     "simple-lightbox": "^2.1.0",
